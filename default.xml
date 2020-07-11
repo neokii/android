@@ -31,7 +31,7 @@
   <project path="frameworks/opt/telephony" name="neokii/android_frameworks_opt_telephony" groups="pdk" />
   <project path="hardware/qcom/audio/default" name="neokii/android_hardware_qcom_audio" groups="qcom,qcom_audio" />
   <project path="system/core" name="neokii/android_system_core" groups="pdk" />
-  <project name="commaai/android_packages_apps_NEOSSetup" path="packages/apps/NEOSSetup" remote="private" revision="master" upstream="master"/>
+  <project name="neokii/android_packages_apps_NEOSSetup" path="packages/apps/NEOSSetup" />
 
 
 
