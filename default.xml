@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="github"
-           fetch=".."
-           review="review.lineageos.org" />
-
-  <remote  name="private"
-           fetch="ssh://git@github.com" />
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="ssh://git@github.com" name="private"/>
 
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
@@ -20,22 +16,22 @@
 
   <!-- AOSP Projects -->
 
-  <project path="build" name="neokii/android_build" groups="pdk">
-    <copyfile src="core/root.mk" dest="Makefile" />
+  <project groups="pdk" name="neokii/android_build" path="build" remote="private" revision="master" upstream="master">
+    <copyfile dest="Makefile" src="core/root.mk"/>
   </project>
 
-  <project name="neokii/proprietary_vendor_oneplus/tree/master/cheeseburger" path="vendor/oneplus/cheeseburger" />
+  <project name="neokii/proprietary_vendor_oneplus/tree/master/cheeseburger" path="vendor/oneplus/cheeseburger" remote="private" revision="master" upstream="master" />
 
   <project name="LineageOS/android_device_oppo_common" path="device/oppo/common" />
-  <project name="neokii/android_device_oneplus_cheeseburger" path="device/oneplus/cheeseburger" />
+  <project name="neokii/android_device_oneplus_cheeseburger" path="device/oneplus/cheeseburger" remote="private" revision="master" upstream="master" />
   <project name="neokii/android_device_qcom_common" path="device/qcom/common" upstream="master"/>
 
-  <project clone-depth="1" name="neokii/android_kernel_oneplus_msm8998" path="kernel/oneplus/msm8998" />
+  <project name="neokii/android_kernel_oneplus_msm8998" path="kernel/oneplus/msm8998" remote="private" revision="master" upstream="master"/>
   <project path="frameworks/base" name="neokii/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/telephony" name="neokii/android_frameworks_opt_telephony" groups="pdk" />
   <project path="hardware/qcom/audio/default" name="neokii/android_hardware_qcom_audio" groups="qcom,qcom_audio" />
   <project path="system/core" name="neokii/android_system_core" groups="pdk" />
-  <project name="commaai/android_packages_apps_NEOSSetup" path="packages/apps/NEOSSetup" />
+  <project name="commaai/android_packages_apps_NEOSSetup" path="packages/apps/NEOSSetup" remote="private" revision="master" upstream="master"/>
 
 
 
