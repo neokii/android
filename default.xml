@@ -16,8 +16,8 @@
 
   <!-- AOSP Projects -->
 
-  <project groups="pdk" name="neokii/android_build" path="build" remote="private" revision="master" upstream="master">
-    <copyfile dest="Makefile" src="core/root.mk"/>
+  <project path="build" name="neokii/android_build" groups="pdk,tradefed">
+    <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
   <project name="neokii/proprietary_vendor_oneplus/tree/master/cheeseburger" path="vendor/oneplus/cheeseburger" remote="private" revision="master" upstream="master" />
